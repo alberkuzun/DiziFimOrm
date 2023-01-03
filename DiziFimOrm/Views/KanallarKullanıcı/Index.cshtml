@@ -1,0 +1,30 @@
+﻿@model IEnumerable<DiziFilmModel.Models.joinler>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Kanal Adı</th>
+            <th>Dizi Adı</th>
+            @*<th>Oyuncu Adı</th>*@
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@item.kanallar.KanalAdi</td>
+            <td>@item.diziler.DiziAdi</td>
+            
+        </tr>
+}
+    </tbody>
+</table>
